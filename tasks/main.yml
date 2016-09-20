@@ -11,7 +11,3 @@
     mode: 0700
     state: directory
   when: opdk_version | version_compare('4.16.01', '>=')
-
-- name: Postgresql Server installation
-  shell: '{{ apigee_setup }} -p ps -f {{ opdk_installation_config_file }}'
-  when: opdk_version | version_compare('4.16.01', '>=')
