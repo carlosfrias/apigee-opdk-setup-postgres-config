@@ -1,5 +1,5 @@
 ---
-# tasks file for opdk-setup-ps
+# tasks file for apigee-opdk-setup-ps
 - include: 4150703-main.yml
   when: opdk_version | version_compare('4.16.01', '<')
 
