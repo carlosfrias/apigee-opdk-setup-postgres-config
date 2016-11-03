@@ -1,8 +1,5 @@
 ---
-# tasks file for apigee-opdk-setup-ps
-- include: 4150703-main.yml
-  when: opdk_version | version_compare('4.16.01', '<')
-
+# tasks file for apigee-opdk-setup-postgres-config
 - name: Set permissions on pgdata folder
   file:
     path: '{{ apigee_postgresql_data_dir }}'
