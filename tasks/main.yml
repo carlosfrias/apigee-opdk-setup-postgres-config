@@ -7,4 +7,10 @@
     group: '{{ opdk_group_name }}'
     mode: 0700
     state: directory
-  when: opdk_version | version_compare('4.16.01', '>=')
+  when: opdk_version | version_compare('4.16.01', '>=') and opdk_version | verion_compare('4.16.09', '<')
+
+- name: Set permissions on pgdata folder
+  file:
+    path: '{{ apigee_postgresql_data_dir }}'
+    state: absent
+  when: opdk_version | version_compare('4.16.09', '>=')
