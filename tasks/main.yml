@@ -13,4 +13,4 @@
   file:
     path: '{{ apigee_postgresql_data_dir }}'
     state: absent
-  when: clear_pgdata is defined and clear_pgdata | bool == True
+  when: clear_pgdata | default(False)
