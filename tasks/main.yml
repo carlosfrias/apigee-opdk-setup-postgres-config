@@ -13,4 +13,4 @@
   file:
     path: '{{ apigee_postgresql_data_dir }}'
     state: absent
-  when: clear_pgdata | default(False)
+  when: clear_pgdata | default(False) and opdk_version | version_compare('4.16.09', '==')
