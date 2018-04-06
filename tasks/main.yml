@@ -7,10 +7,9 @@
     group: '{{ opdk_group_name }}'
     mode: 0700
     state: directory
-  when: opdk_version | version_compare('4.16.01', '>=') and opdk_version | version_compare('4.16.09', '<')
 
 - name: Remove pgdata folder for 4.16.09
   file:
     path: '{{ apigee_postgresql_data_dir }}'
     state: absent
-  when: clear_pgdata | default(False) and opdk_version | version_compare('4.16.09', '==')
+  when: clear_pgdata | default(False)
