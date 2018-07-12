@@ -10,7 +10,7 @@
       mode: 0700
       state: directory
 
-  - name: Remove pgdata folder for 4.16.09
+  - name: Remove pgdata folder when clear_pgdata is set
     file:
       path: '{{ apigee_postgresql_data_dir }}'
       state: absent
