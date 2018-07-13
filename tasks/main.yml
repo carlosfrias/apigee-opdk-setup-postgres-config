@@ -1,5 +1,8 @@
 ---
 # tasks file for apigee-opdk-setup-postgres-config
+- name: Set attributes for replication
+  include_tasks: postgres.yml
+
 - block:
 
   - name: Set permissions on pgdata folder
