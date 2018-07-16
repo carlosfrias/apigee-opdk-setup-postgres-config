@@ -14,3 +14,5 @@ galaxy_info:
   - opdk
 dependencies:
 - { role: apigee-opdk-modules }
+- { role: apigee-opdk-settings-postgres }
+
