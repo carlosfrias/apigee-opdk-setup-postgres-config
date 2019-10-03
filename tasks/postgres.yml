@@ -46,7 +46,7 @@
       value: '{{ pgstandby_ip }}'
     when: pgstandby_ip is defined
 
-  when: (groups['dc_1_pgmaster'] is defined or groups['dc_1_pgstandby'] is defined) and inventory_hostname in groups['dc-1']
+  when: (groups['dc_1_pgmaster'] is defined or groups['dc_1_pgstandby'] is defined) and inventory_hostname in groups['dc_1']
 
 - block:
   - name: Obtain pgmaster IP for DC 1, if not provided
